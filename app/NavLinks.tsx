@@ -1,9 +1,11 @@
 import { categories } from "../constants";
+import NavLink from "./NavLink";
+
 function NavLinks() {
   return (
     <nav>
       {categories.map((category) => (
-        <NavLinks key={category} categories={category} />
+        <NavLink key={category} category={category} isActive={true} />
       ))}
     </nav>
   );
