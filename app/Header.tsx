@@ -3,6 +3,8 @@ import Link from "next/link";
 import NavLinks from "./NavLinks";
 import SearchBar from "./SearchBar";
 
+// server components are not allowed to use hooks, use a small fraction like NavLinks should use the client
+
 function Header() {
   return (
     <header>
@@ -28,8 +30,6 @@ function Header() {
       {/* Search bar section */}
       <SearchBar />
     </header>
-    // NavLinks
-    //SearchBar
   );
 }
 
