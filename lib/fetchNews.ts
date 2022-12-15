@@ -1,4 +1,4 @@
-import { gql, useQuery } from "graphql-request";
+import { gql } from "graphql-request";
 import sortNewsByImage from "./sortNewsByImage";
 
 const fetchNews = async (
@@ -14,12 +14,12 @@ const fetchNews = async (
       $keywords: String
     ) {
       myQuery(
-        access_key: "a57171f77629dc0fd80c62bfd14d9838"
+        access_key: $access_key
         categories: $categories
-        countries: 'gb'
-        sort: 'published_desc'
+        countries: "gb"
+        sort: "published_desc"
         keywords: $keywords
-        ) {
+      ) {
         data {
           author
           category
@@ -50,12 +50,11 @@ const fetchNews = async (
       next: isDynamic ? { revalidate: 0 } : { revalidate: 30 },
       headers: {
         "content-Type": "application/json",
-        authorization: `Apikey${process.env.STEPZEN_API_KEY}`,
+        Authorization: `Apikey ${process.env.STEPZEN_API_KEY}`,
       },
       body: JSON.stringify({
         query,
-        // stepzen expexts variables
-        variances: {
+        variables: {
           access_key: process.env.MEDIASTACK_API_KEY,
           categories: category,
           keywords: keywords,
