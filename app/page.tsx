@@ -5,7 +5,12 @@ import fetchNews from "../lib/fetchNews";
 async function Homepage() {
   const news: NewsResponse = await fetchNews(categories.join(","));
   console.log(news);
-  return <div>{/* NewsList  */}</div>;
+  return (
+    <div>
+      <div></div>
+      {/* NewsList  */}
+    </div>
+  );
 }
 
 export default Homepage;
