@@ -4,7 +4,7 @@ import fetchNews from "../lib/fetchNews";
 
 async function Homepage() {
   const news: NewsResponse = await fetchNews(categories.join(","));
-  console.log(news);
+  //console.log(news);
   return (
     <div>
       <div></div>

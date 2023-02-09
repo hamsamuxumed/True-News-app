@@ -10,6 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <head />
       <body className="bg-gray-150 transition-all duration-700">
         <Header />
         <div className="max-w-6xl mx-auto">{children}</div>
