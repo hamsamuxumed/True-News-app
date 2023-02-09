@@ -63,15 +63,17 @@ const fetchNews = async (
     }
   );
 
-  console.log("WE ARE GETTING NEW DATA", category, keywords);
+  console.log("WE ARE GETTING NEW DATA");
+  console.log("WE ARE GETTING categories", category);
+  console.log("WE ARE GETTING keywords", keywords);
 
   const newsResponse = await res.json();
   // sort images and non images
   const newsData = sortNewsByImage(newsResponse.data.myQuery);
-  // return newsData
+
   return newsData;
 };
 
 export default fetchNews;
 
-//stepzen import curl "http://api.mediastack.com/v1/news?access_key=51cb4d78e8a015b03cff1de49f7464c5"
+//stepzen import curl "http://api.mediastack.com/v1/news?access_key=18c433c5a66b2a9230de05c3b6d756bb"
