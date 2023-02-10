@@ -75,5 +75,3 @@ const fetchNews = async (
 };
 
 export default fetchNews;
-
-//stepzen import curl "http://api.mediastack.com/v1/news?access_key=18c433c5a66b2a9230de05c3b6d756bb"
