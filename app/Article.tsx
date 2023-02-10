@@ -12,11 +12,11 @@ function Article({ article }: Props) {
           className="h-56 w-full object-cover rounded-t-lg shadow-md"
         />
       )}
-      <div className="">
-        <div>
-          <h2>{article.title}</h2>
-          <section>
-            <p>{article.description}</p>
+      <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col p-5">
+          <h2 className="font-bold font-serif">{article.title}</h2>
+          <section className="mt-2 flex-1">
+            <p className="text-xs line-clamp-6">{article.description}</p>
           </section>
           <footer>
             <p>{article.sources}</p>
